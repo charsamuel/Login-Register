@@ -1,0 +1,27 @@
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the text is hidden until it’s revealed */
+  border-right: 0.15em solid black; /* Creates the caret */
+  white-space: nowrap; /* Keeps the text on a single line */
+  margin: 0 auto; /* Center the text */
+  letter-spacing: 0.15em; /* Adds some spacing between the letters */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
